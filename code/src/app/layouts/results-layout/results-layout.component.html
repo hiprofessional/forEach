@@ -1,0 +1,24 @@
+<div class='content'>
+  <div class="left-sidebar">
+    <a href='#' (click)='goBack()' class='go-back'> 
+      <span class='go-back__text'>&larr; Back</span>
+    </a>
+  </div>
+  <div class="main">
+    <div class="search">
+      <div class="logo">
+        <a routerLink='/'>
+          <img src="./assets/Logo.svg" alt="Logo">
+        </a>
+      </div>
+      <div class="searchbar">
+        <app-search-bar></app-search-bar>
+      </div>
+    </div>
+
+    <router-outlet></router-outlet>
+
+    <app-quick-preview></app-quick-preview>
+  </div>
+  <div class="right-sidebar"></div>
+</div>

@@ -1,0 +1,22 @@
+@import 'styles/variables.scss';
+
+pre {
+  background-color: $code-bg-color;
+  padding: 10px;
+  overflow: auto;
+  width: $body-width - $answer-info-width;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+// ::-webkit-scrollbar {
+//   -webkit-appearance: none;
+//   width: 6px;
+//   height: 6px;
+// }
+// ::-webkit-scrollbar-thumb {
+//   border-radius: 3px;
+//   background-color: $border-color;
+//   -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+// }

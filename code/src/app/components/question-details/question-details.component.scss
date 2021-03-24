@@ -1,0 +1,29 @@
+@import "src/styles/variables.scss";
+
+.additional {
+  &__tags {
+    font-size: 13px;
+    color: $primary-text-color;
+    cursor: pointer;
+  }
+  &__author {
+    font-size: 13px;
+    text-align: right;
+    color: $secondary-text-color;
+    cursor: pointer;
+  }
+}
+.body {
+  &__title h2{
+    color: $primary-text-color;
+    font-weight: normal;
+    font-size: 22px;
+  }
+  &__content {
+    font-size: 13px;
+  }
+  &__additional {
+    display: flex;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,27 @@
+@import "src/styles/variables.scss";
+
+.answer {
+  margin-bottom: 15px;
+  display: flex;
+  padding-top: 15px;
+  &__body {
+    font-size: 13px;
+  }
+
+  &__info {
+    min-width: $answer-info-width;
+    max-width: $answer-info-width;
+
+    .accepted {
+      color: green;
+      font-size: 50px;
+    }
+  }
+
+  &__author{
+    font-size: 13px;
+    color: $secondary-text-color;
+    cursor: pointer;
+    display: inline-block;
+  }
+}

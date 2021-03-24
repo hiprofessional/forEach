@@ -1,0 +1,69 @@
+@import "src/styles/variables.scss";
+$shift: 20px;
+$header-height: 60px;
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #00000030;
+}
+.quick, .quick__hidden  {
+  position: fixed;
+  height: 60%;
+  width: $body-width + $shift*2;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0 0 20px $border-color;
+  padding: 0px;
+  margin-left: -$shift;
+  transition: bottom 1s ease-out;
+  background-color: $light-color;
+  padding-bottom: $header-height;
+}
+.quick__hidden {
+  bottom: -70%;
+}
+.quick{
+  bottom: 0;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15px;
+  height: $header-height;
+  &__close{
+    padding-top: 15px;
+    padding: 10px 15px;
+    
+    height: 20px;
+    border-radius: 0 5px 0 0;
+    cursor: pointer;
+    &:hover {
+      background: $accent-color;
+      color: $light-color;
+    }
+  }
+}
+
+
+.result {
+  &__item {
+    padding: 20px;
+    border-bottom: 1px solid $border-color;
+  }
+}
+.results {
+  height: 100%;
+  overflow-y: auto;
+}
+.no-result {
+  text-align: center;
+  font-style: italic;
+  color: $secondary-text-color;
+
+  .keywords{
+    font-size: 13px;
+  }
+}

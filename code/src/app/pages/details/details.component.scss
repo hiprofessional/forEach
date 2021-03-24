@@ -1,0 +1,14 @@
+@import "src/styles/variables.scss";
+
+.question, .result__item{
+  border-bottom: 1px solid $border-color;
+}
+
+.question {
+  padding-bottom: 40px;
+}
+.no-result {
+  text-align: center;
+  font-style: italic;
+  color: $secondary-text-color;
+}

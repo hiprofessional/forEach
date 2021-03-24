@@ -1,0 +1,49 @@
+@import "src/styles/variables.scss";
+.search {
+  margin-bottom: 20px;
+  display: flex;
+
+  .searchbar{
+    flex: auto;
+  }
+}
+.search {
+  width: $body-width;
+  margin-top: 15px;
+}
+
+.content {
+  display: flex;
+  // height: 100%;
+  // align-items: stretch;
+  .main {
+    flex: $body-width;
+    max-width: $body-width;
+    min-width: $body-width;
+  }
+}
+.left-sidebar, .right-sidebar {
+  flex: 1;
+}
+
+.left-sidebar {
+  // height: 100%;
+  // border-right: 1px solid $border-color;
+  // border-top: 1px solid $border-color;
+  min-width: 100px;
+  .go-back {
+    text-decoration: none;
+    color: $link-color;
+    display: block;
+    height: 100%;
+    padding-left: 10px;
+    padding-top: 75px;
+    margin-right: 10px;
+    &:hover {
+      background-color: $go-back-bg-color;
+    }
+    &__text {
+      position: fixed;
+    }
+  }
+}

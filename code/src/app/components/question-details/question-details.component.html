@@ -1,0 +1,17 @@
+<div class="question" *ngIf='question'>
+  <div class="question__body">
+    <div class="body__title">
+      <h2 [innerHtml]='question.title'></h2>
+    </div>
+    <div class="body__content" [innerHtml]="question.body"></div>
+    <div class="body__additional">
+      <div class="additional__tags">
+        <app-tag *ngFor='let tag of question.tags' [tag]='tag'></app-tag>
+      </div>
+      <div class="additional__author">
+        <app-author [author]='question.owner'></app-author>
+      </div>
+    </div>
+
+  </div>
+</div>

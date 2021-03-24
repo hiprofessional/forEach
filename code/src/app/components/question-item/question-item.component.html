@@ -1,0 +1,21 @@
+<div class="question">
+  <div class="question__answercount">
+    <a [routerLink]='["/question", question.question_id]'>
+      <app-answer-counter [count]='question.answer_count' [isAnswered]='question.is_answered'></app-answer-counter>
+    </a>
+  </div>
+  <div class="question__body">
+    <div class="body__title">
+      <a [routerLink]='["/question", question.question_id]' [innerHtml]='question.title'></a>
+    </div>
+    <div class="body__additional">
+      <div class="additional__tags">
+        <app-tag *ngFor='let tag of question.tags' [tag]='tag'></app-tag>
+      </div>
+      <div class="additional__author">
+        <app-author [author]='question.owner'></app-author>
+      </div>
+    </div>
+   
+  </div>
+</div>

@@ -1,0 +1,41 @@
+@import "src/styles/variables.scss";
+
+a {
+  text-decoration: none;
+}
+.question {
+  display: flex;
+  &__answercount {
+    margin-right: 10px;
+  }
+  &__body {
+    flex-direction: column;
+    justify-content: space-between;
+    display: flex;
+    flex: auto;
+  }
+}
+.body {
+  &__title a{
+    color: $link-color;
+    font-weight: bold;
+    font-size: 13px;
+  }
+  &__additional {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.additional {
+  &__tags {
+    font-size: 13px;
+    color: $primary-text-color;
+    cursor: pointer;
+  }
+  &__author {
+    font-size: 13px;
+    text-align: right;
+    color: $secondary-text-color;
+    cursor: pointer;
+  }
+}

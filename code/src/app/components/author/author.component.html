@@ -1,0 +1,4 @@
+<div class="author" *ngIf='author' (click)='clickAuthor()'>
+  <img [src]='author.profile_image' class='author__image'/>
+  <span [innerHtml]='author.display_name'></span>
+</div>

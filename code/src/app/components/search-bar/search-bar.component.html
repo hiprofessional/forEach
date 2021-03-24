@@ -1,0 +1,8 @@
+<div class='searchbar'>
+  <div class="searchbar__input">
+    <input type="text" [(ngModel)]='searchValue' (keyup.enter)="clickSearch()">
+  </div>
+  <div class="searchbar__button">
+    <button (click)='clickSearch()'>Search</button>
+  </div>
+</div>

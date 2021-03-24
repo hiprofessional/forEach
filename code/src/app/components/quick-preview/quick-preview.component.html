@@ -1,0 +1,19 @@
+<div class="overlay" *ngIf="isPanelVisible"></div>
+<div class='quick__hidden' [ngClass]="{'quick': isPanelVisible}">
+  <div class="header">
+    <h3>Search by {{searchBy}}: {{searchValue}}</h3>
+    <div class="header__close" (click)='closePanel()'>
+      &times;
+    </div>
+  </div>
+  <div class="results" *ngIf='items'>
+    <div *ngFor='let item of items?.items' class='result__item'>
+      <app-question-item [question]='item'></app-question-item>
+    </div>
+
+    <div *ngIf='items.items.length == 0 && !loading' class='no-result'>
+      <p>We couldn't find anything for <strong>{{searchValue}}</strong></p>
+      <p class='keywords'>Try different or less specific keywords.</p>
+    </div>
+  </div>
+</div>

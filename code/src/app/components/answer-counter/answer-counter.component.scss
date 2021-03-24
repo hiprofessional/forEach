@@ -1,0 +1,29 @@
+@import 'src/styles/variables.scss';
+
+.counter {
+  text-align: center;
+  width: 56px;
+  height: 56px;
+  border-radius: $border-radius;
+  border: 1px solid transparent;
+
+  &__value {
+    color: $accent-color;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  &__title {
+    color: $primary-color;
+    font-size: 11px;
+  }
+}
+.hasAnswers {
+  border: 1px solid $primary-color;
+}
+.hasMarkedAnswer.counter {
+  background-color: $primary-color;
+
+  .counter__value, .counter__title {
+    color: $light-color;
+  }
+}

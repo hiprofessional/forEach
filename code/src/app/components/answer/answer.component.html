@@ -1,0 +1,13 @@
+<div class="answer">
+  <div class="answer__info">
+    <div class="accepted" *ngIf='answer.is_accepted'> &#10003; </div>
+  </div>
+  <div class="answer__content">
+    <div class="answer__body" [innerHtml]='answer.body'></div>
+
+    <div class="answer__author">
+      <app-author [author]='answer.owner'></app-author>
+    </div>
+  </div>
+
+</div>

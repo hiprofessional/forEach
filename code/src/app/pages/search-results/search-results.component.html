@@ -1,4 +1,4 @@
-<div class="results" *ngIf='items'>
+<div class="results" *ngIf='items' [@fadeInOut]>
   <div *ngFor='let item of items?.items' class='result__item'>
     <app-question-item [question]='item'></app-question-item>
   </div>
@@ -8,4 +8,3 @@
     <p class='keywords'>Try different or less specific keywords.</p>
   </div>
 </div>
-

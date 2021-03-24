@@ -2,11 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { QuestionService } from 'src/app/core/services/question.service';
 import { Answer, Question, SearchData } from 'src/app/models/question';
+import { fadeAnimation } from '../animations/animations';
 
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
-  styleUrls: ['./details.component.scss']
+  styleUrls: ['./details.component.scss'],
+  animations: [
+    fadeAnimation
+  ]
 })
 export class DetailsComponent implements OnInit {
   id: number;
@@ -16,7 +20,7 @@ export class DetailsComponent implements OnInit {
   constructor(
     private questionService: QuestionService,
     private route: ActivatedRoute,
-    ) { }
+  ) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {

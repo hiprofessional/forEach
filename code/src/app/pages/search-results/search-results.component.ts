@@ -2,20 +2,24 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { QuestionService } from 'src/app/core/services/question.service';
 import { Question, SearchData } from 'src/app/models/question';
+import { fadeAnimation } from '../animations/animations';
 
 @Component({
   selector: 'app-search-results',
   templateUrl: './search-results.component.html',
-  styleUrls: ['./search-results.component.scss']
+  styleUrls: ['./search-results.component.scss'],
+  animations: [
+    fadeAnimation
+  ]
 })
 export class SearchResultsComponent implements OnInit {
   items: SearchData<Question>;
   query: string;
   loading = false;
-  
+
   constructor(private questionService: QuestionService,
     private route: ActivatedRoute,
-    ) { }
+  ) { }
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {

@@ -5,4 +5,4 @@
 
 [Как запустить локально](code/README.md)
 
-[Демо](https://hiprofessional.github.io/forEach/demo/)
+[Демо](https://hiprofessional.github.io/forEach/demo/index.html)
